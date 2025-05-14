@@ -1,0 +1,108 @@
+TicTacToe.java:
+--------------
+public class TicTacToe
+{
+   //copy over code from Tic Tac Toe Methods!
+
+   private int turn= 0 ;
+    private String[][] board = new String[3][3];
+   public TicTacToe ();
+
+        board = new String [3][3]{ 
+    
+       {"-","-","-"},
+       {"-","-","-"},
+       {"-","-","-"},
+};
+}
+   //this method returns the current turn
+   public int getTurn();{
+        return turn;
+    }
+
+    // This method prints out the board array on to the console
+    public void printBoard() {
+        System.out.println("0 1 2");
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+                System.out.print(board[row][col] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    // This method returns true if space row, col is a valid space
+    public boolean pickLocation(int row, int col) {
+        if (row < 3 && col < 3) {
+            if (board[row][col].equals("-")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // This method places an X or O at location row,col based on the int turn
+    public void takeTurn(int row, int col) {
+        if (pickLocation(row, col)) {
+            if (turn % 2 == 0) {
+                board[row][col] = "X";
+            } else {
+                board[row][col] = "O";
+            }
+            turn++;
+        }
+    }
+
+    // This method returns a boolean that returns true if a row has three X or O's in a row
+    public boolean checkRow() {
+        for (int x = 0; x < 3; x++) {
+            if (!board[x][0].equals("-") && board[x][0].equals(board[x][1]) && board[x][0].equals(board[x][2])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // This method returns a boolean that returns true if a col has three X or O's
+    public boolean checkCol() {
+        for (int x = 0; x < 3; x++) {
+            if (!board[0][x].equals("-") && board[0][x].equals(board[1][x]) && board[0][x].equals(board[2][x])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // This method returns a boolean that returns true if either diagonal has three X or O's
+    public boolean checkDiag() {
+        if (!board[0][0].equals("-") && board[0][0].equals(board[1][1]) && board[0][0].equals(board[2][2])) {
+            return true;
+        }
+        if (!board[0][2].equals("-") && board[0][2].equals(board[1][1]) && board[0][2].equals(board[2][0])) {
+            return true;
+        }
+        return false;
+    }
+
+    // This method returns a boolean that checks if someone has won the game
+    public boolean checkWin() {
+        return checkRow() || checkCol() || checkDiag();
+    }
+}
+
+TicTacToeTester.java:
+--------------------
+import java.util.Scanner;
+
+public class TicTacToeTester
+{
+    public static void main(String[] args)
+    {
+        scanner bb = new scanner (System.in); 
+        TikTacToe board = new TikTacToe (); 
+        
+    }
+    if (board.checkln);
+    { else if board.getTurn ()% 
+}
+
