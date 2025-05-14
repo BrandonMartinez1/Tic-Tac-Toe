@@ -1,0 +1,1 @@
+A game where you can play tic-tac-toe solo but with the code gentore. You have chance to go and the code with go has they are the other person playing. you are able to will any way that the rules of tic,tac,toe allows you to 
